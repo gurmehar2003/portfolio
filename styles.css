@@ -1,0 +1,488 @@
+/* ==========================================================================
+   GURMEHAR SINGH - PORTFOLIO STYLES
+   Creative Designer & Video Editor (Vertical & Horizontal)
+   ========================================================================== */
+
+:root {
+  --bg-primary: #070709;
+  --bg-secondary: #0f0f14;
+  --bg-card: #13131b;
+  --bg-glass: rgba(18, 18, 26, 0.78);
+  
+  --accent-lime: #d4ff00;
+  --accent-lime-glow: rgba(212, 255, 0, 0.28);
+  --accent-cyan: #00f0ff;
+  
+  --text-main: #f4f4f7;
+  --text-muted: #9191a2;
+  --text-dim: #545464;
+  
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-active: rgba(212, 255, 0, 0.45);
+  
+  --phone-width: 285px;
+  --phone-height: 540px;
+}
+
+/* Global Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent-lime);
+  color: #050505;
+}
+
+/* Typography Classes */
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono-tech {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-editorial {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Ambient Grain Overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #22222e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-lime);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(212, 255, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px var(--accent-lime-glow);
+  transform: translateY(-3px);
+}
+
+/* Navigation Island */
+.nav-island {
+  background: rgba(13, 13, 18, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 9999px;
+}
+
+/* Text Gradients */
+.text-gradient-lime {
+  background: linear-gradient(135deg, #ffffff 20%, #d4ff00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(180deg, #ffffff 30%, #888899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hollow Outline Typography */
+.text-stroke-hollow {
+  -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.28);
+  color: transparent;
+  transition: -webkit-text-stroke 0.3s ease, color 0.3s ease;
+}
+
+.text-stroke-hollow:hover {
+  -webkit-text-stroke: 1.2px var(--accent-lime);
+  color: rgba(212, 255, 0, 0.15);
+}
+
+/* ==========================================================================
+   KINETIC TYPOGRAPHY MOTION GRAPHIC STAGE
+   ========================================================================== */
+.kinetic-motion-stage {
+  position: relative;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #0e0e15 0%, #07070a 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 45px rgba(212, 255, 0, 0.08);
+  overflow: hidden;
+  padding: 40px 24px;
+}
+
+.kinetic-canvas-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Kinetic Ticker Tracks */
+.kinetic-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  user-select: none;
+}
+
+.kinetic-track-left {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: kineticScrollLeft 20s linear infinite;
+}
+
+.kinetic-track-right {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: kineticScrollRight 22s linear infinite;
+}
+
+@keyframes kineticScrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes kineticScrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.kinetic-track-wrapper:hover .kinetic-track-left,
+.kinetic-track-wrapper:hover .kinetic-track-right {
+  animation-play-state: paused;
+}
+
+/* Rotating Stamp Badge */
+.rotating-stamp {
+  animation: rotateStamp 18s linear infinite;
+}
+
+@keyframes rotateStamp {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Morphing Text Pill */
+.morph-word-pill {
+  display: inline-block;
+  padding: 4px 18px;
+  border-radius: 9999px;
+  background: var(--accent-lime);
+  color: #070709;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  box-shadow: 0 0 25px rgba(212, 255, 0, 0.4);
+}
+
+/* Glowing Pulse Dot */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-lime);
+  border-radius: 50%;
+  position: relative;
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 1px solid var(--accent-lime);
+  border-radius: 50%;
+  animation: pingDot 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pingDot {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+/* 9:16 Vertical Phone Mockups */
+.phone-mockup-container {
+  width: 100%;
+  max-width: var(--phone-width);
+  height: var(--phone-height);
+  border-radius: 36px;
+  background: #0d0d12;
+  border: 3.5px solid #22222e;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  user-select: none;
+}
+
+.phone-mockup-container:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(212, 255, 0, 0.45);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 35px var(--accent-lime-glow);
+}
+
+.phone-island {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84px;
+  height: 20px;
+  background: #000;
+  border-radius: 16px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+.phone-camera-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #18181f;
+  border: 1px solid #282833;
+}
+
+.phone-sensor-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #0a1020;
+}
+
+.phone-video-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+  background-color: #0b0b10;
+}
+
+.phone-reflection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 50%);
+  pointer-events: none;
+  z-index: 25;
+}
+
+.phone-ui-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 38px 14px 16px 14px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.88) 100%);
+  pointer-events: none;
+}
+
+.phone-ui-layer * {
+  pointer-events: auto;
+}
+
+/* 16:9 Horizontal Cinematic Video Card */
+.horizontal-video-card {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 22px;
+  background: #0d0d12;
+  border: 2px solid #22222e;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  user-select: none;
+}
+
+.horizontal-video-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 255, 0, 0.45);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 35px var(--accent-lime-glow);
+}
+
+.horizontal-video-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Sound Wave Equalizer */
+.sound-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 14px;
+}
+
+.sound-bar {
+  width: 3px;
+  background: var(--accent-lime);
+  border-radius: 2px;
+  animation: soundBounce 1s infinite ease-in-out alternate;
+}
+
+.sound-bar:nth-child(1) { height: 5px; animation-delay: 0.1s; }
+.sound-bar:nth-child(2) { height: 13px; animation-delay: 0.3s; }
+.sound-bar:nth-child(3) { height: 8px; animation-delay: 0.2s; }
+.sound-bar:nth-child(4) { height: 14px; animation-delay: 0.4s; }
+
+@keyframes soundBounce {
+  0% { height: 3px; }
+  100% { height: 14px; }
+}
+
+.sound-bars.paused .sound-bar {
+  animation-play-state: paused;
+  height: 3px !important;
+}
+
+/* Infinite Brand Marquee */
+.marquee-track {
+  display: flex;
+  gap: 3.5rem;
+  width: max-content;
+  animation: marqueeScroll 24s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Buttons */
+.btn-glow-primary {
+  background: var(--accent-lime);
+  color: #070709;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 11px 26px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 20px rgba(212, 255, 0, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-glow-primary:hover {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-outline-glass {
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 11px 24px;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-outline-glass:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Gear Spec Card */
+.gear-spec-card {
+  background: #111119;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 22px;
+  transition: all 0.3s ease;
+}
+
+.gear-spec-card:hover {
+  border-color: rgba(212, 255, 0, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Modal */
+.theater-modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.theater-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --phone-width: 260px;
+    --phone-height: 500px;
+  }
+}

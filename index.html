@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GURMEHAR SINGH — Creative Designer & Video Editor</title>
+  <meta name="description" content="Portfolio of Gurmehar Singh. Creative Designer & Video Editor. Crafting scroll-stopping vertical (9:16) and horizontal (16:9) video production for visionary brands.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'onyx-black': '#070709',
+            'deep-charcoal': '#0f0f14',
+            'card-dark': '#13131b',
+            'lime-accent': '#d4ff00',
+            'cyan-accent': '#00f0ff',
+          },
+          fontFamily: {
+            syne: ['Syne', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            editorial: ['Space Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#070709] text-zinc-100 antialiased relative selection:bg-lime-400 selection:text-black">
+
+  <!-- Ambient Film Grain Filter -->
+  <div class="grain-overlay"></div>
+
+  <!-- Ambient Atmospheric Glows -->
+  <div class="fixed top-[-80px] left-[-120px] w-[500px] h-[500px] bg-lime-400 rounded-full blur-[170px] opacity-[0.06] pointer-events-none"></div>
+  <div class="fixed top-[45%] right-[-140px] w-[600px] h-[600px] bg-purple-600 rounded-full blur-[180px] opacity-[0.05] pointer-events-none"></div>
+
+  <!-- ========================================================================
+       TOP FLOATING NAVIGATION ISLAND
+       ======================================================================== -->
+  <header class="fixed top-5 left-0 right-0 z-50 flex justify-center px-4">
+    <nav class="nav-island px-5 py-3 flex items-center justify-between gap-6 max-w-5xl w-full">
+      <!-- Monogram Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-8 h-8 rounded-lg bg-lime-400 text-black flex items-center justify-center font-syne font-extrabold text-sm tracking-tighter group-hover:scale-105 transition-transform">
+          GS
+        </div>
+        <div class="flex flex-col">
+          <span class="font-syne font-bold text-xs tracking-wider text-white uppercase group-hover:text-lime-400 transition-colors">
+            GURMEHAR SINGH
+          </span>
+          <span class="font-mono text-[9px] text-zinc-400 uppercase tracking-widest">
+            Creative Designer &bull; Video Editor
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-7 text-xs font-medium tracking-wide text-zinc-300">
+        <a href="#intro" class="hover:text-lime-400 transition-colors">Motion Graphic</a>
+        <a href="#brands" class="hover:text-lime-400 transition-colors">Brands</a>
+        <a href="#work" class="hover:text-lime-400 transition-colors">Work</a>
+        <a href="#setup" class="hover:text-lime-400 transition-colors">Camera Specs</a>
+        <a href="#about" class="hover:text-lime-400 transition-colors">About</a>
+      </div>
+
+      <!-- Action Group -->
+      <div class="flex items-center gap-3">
+        <!-- SFX Toggle -->
+        <button id="sound-toggle-btn" class="h-9 px-3 rounded-full border border-white/10 bg-white/5 text-zinc-400 hover:text-white flex items-center gap-1.5 text-xs font-mono transition-all" title="Toggle Sound FX">
+          <svg id="sound-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+          <span id="sound-label" class="hidden sm:inline text-[10px]">SFX OFF</span>
+        </button>
+
+        <a href="#contact" class="btn-glow-primary text-xs py-2 px-4 whitespace-nowrap">
+          <span>Get in Touch</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================
+       HERO: KINETIC TYPOGRAPHY & MOTION GRAPHIC SHOWCASE
+       ======================================================================== -->
+  <section id="intro" class="relative pt-36 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center min-h-[92vh] justify-center">
+    <!-- Live Availability Badge -->
+    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6">
+      <span class="pulse-dot"></span>
+      <span class="text-[11px] font-mono uppercase tracking-widest text-zinc-300">
+        Available for Select Brand Commissions &bull; Worldwide
+      </span>
+    </div>
+
+    <!-- Main Clean Typography -->
+    <div class="text-center max-w-4xl">
+      <h1 class="font-syne font-extrabold text-4xl sm:text-6xl md:text-7xl tracking-tight leading-[1] uppercase">
+        <span class="block text-gradient-silver">GURMEHAR SINGH</span>
+        <span class="block text-gradient-lime mt-2 text-2xl sm:text-4xl md:text-5xl">
+          CREATIVE DESIGNER & VIDEO EDITOR
+        </span>
+      </h1>
+      
+      <p class="mt-5 text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto font-sans font-light leading-relaxed">
+        I shoot, edit, and help brands build a scroll-stopping social presence. Crafting both <strong class="text-white font-medium">Vertical (9:16)</strong> & <strong class="text-white font-medium">Horizontal (16:9)</strong> cinema-grade video production.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-7 flex flex-wrap items-center justify-center gap-4">
+        <a href="#work" class="btn-glow-primary text-sm">
+          <span>View Video Work</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <button id="copy-email-btn" class="btn-outline-glass text-sm font-mono text-zinc-300">
+          <span>gurmehar2003@gmail.com</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         COOL KINETIC TYPOGRAPHY MOTION GRAPHIC STAGE
+         ==================================================================== -->
+    <div class="w-full max-w-4xl mt-12">
+      <div class="kinetic-motion-stage relative">
+        <!-- Interactive Canvas Background -->
+        <canvas id="kinetic-canvas" class="kinetic-canvas-bg"></canvas>
+
+        <div class="relative z-10 flex flex-col items-center">
+          <!-- Top Tag & Rotating Stamp -->
+          <div class="w-full flex items-center justify-between pb-6 border-b border-white/10 mb-8">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-lime-400 animate-pulse"></span>
+              <span class="font-mono text-xs text-lime-400 uppercase tracking-widest font-semibold">
+                KINETIC MOTION GRAPHIC
+              </span>
+            </div>
+
+            <!-- Rotating Circle SVG Badge -->
+            <div class="relative w-14 h-14 flex items-center justify-center">
+              <svg class="rotating-stamp w-14 h-14" viewBox="0 0 100 100">
+                <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                <text class="text-[9px] font-mono tracking-widest uppercase fill-zinc-400">
+                  <textPath href="#circlePath" startOffset="0%">
+                    GURMEHAR SINGH • MOTION & DESIGN •
+                  </textPath>
+                </text>
+              </svg>
+              <span class="absolute font-syne font-extrabold text-lime-400 text-sm">GS</span>
+            </div>
+          </div>
+
+          <!-- Central Typographic Statement with Morphing Word -->
+          <div class="text-center my-4 py-2">
+            <span class="text-xs sm:text-sm font-mono text-zinc-400 uppercase tracking-[0.25em] block mb-2">
+              I SHOOT, EDIT & PRODUCE
+            </span>
+            <div class="text-2xl sm:text-4xl md:text-5xl font-syne font-extrabold text-white tracking-tight leading-snug">
+              <span>CINEMATIC</span>
+              <span id="morphing-text-target" class="morph-word-pill mx-2 text-xl sm:text-3xl md:text-4xl">
+                VERTICAL REELS (9:16)
+              </span>
+              <span class="block mt-2">FOR AMBITIOUS BRANDS</span>
+            </div>
+          </div>
+
+          <!-- Kinetic Ticker Tracks (Typography Motion Graphic) -->
+          <div class="w-full mt-8 space-y-3">
+            <!-- Track 1: Display Bold Ribbon -->
+            <div class="kinetic-track-wrapper">
+              <div class="kinetic-track-left font-syne font-extrabold text-2xl sm:text-3xl uppercase tracking-wider text-white">
+                <span class="text-lime-400">01. CINEMATOGRAPHY</span>
+                <span class="text-zinc-600">&bull;</span>
+                <span class="text-stroke-hollow">VIDEO EDITING</span>
+                <span class="text-zinc-600">&bull;</span>
+                <span class="text-lime-400">02. 3D MOTION GRAPHICS</span>
+                <span class="text-zinc-600">&bull;</span>
+                <span class="text-stroke-hollow">KINETIC CAPTIONS</span>
+                <span class="text-zinc-600">&bull;</span>
+                <span class="text-lime-400">03. SOCIAL PRESENCE</span>
+                <span class="text-zinc-600">&bull;</span>
+                <!-- Loop -->
+                <span class="text-lime-400">01. CINEMATOGRAPHY</span>
+                <span class="text-zinc-600">&bull;</span>
+                <span class="text-stroke-hollow">VIDEO EDITING</span>
+                <span class="text-zinc-600">&bull;</span>
+                <span class="text-lime-400">02. 3D MOTION GRAPHICS</span>
+                <span class="text-zinc-600">&bull;</span>
+                <span class="text-stroke-hollow">KINETIC CAPTIONS</span>
+                <span class="text-zinc-600">&bull;</span>
+                <span class="text-lime-400">03. SOCIAL PRESENCE</span>
+                <span class="text-zinc-600">&bull;</span>
+              </div>
+            </div>
+
+            <!-- Track 2: Monospace Spec Track -->
+            <div class="kinetic-track-wrapper">
+              <div class="kinetic-track-right font-mono text-xs sm:text-sm uppercase tracking-widest text-zinc-400">
+                <span class="text-white font-semibold">SONY a6600</span>
+                <span class="text-lime-400">//</span>
+                <span>VILTROX 35MM f/1.7</span>
+                <span class="text-lime-400">//</span>
+                <span class="text-white font-semibold">DJI RS3 MINI GIMBAL</span>
+                <span class="text-lime-400">//</span>
+                <span>PROFESSIONAL MIC</span>
+                <span class="text-lime-400">//</span>
+                <span class="text-white font-semibold">ADOBE PREMIERE PRO</span>
+                <span class="text-lime-400">//</span>
+                <span>AFTER EFFECTS MOTION</span>
+                <span class="text-lime-400">//</span>
+                <!-- Loop -->
+                <span class="text-white font-semibold">SONY a6600</span>
+                <span class="text-lime-400">//</span>
+                <span>VILTROX 35MM f/1.7</span>
+                <span class="text-lime-400">//</span>
+                <span class="text-white font-semibold">DJI RS3 MINI GIMBAL</span>
+                <span class="text-lime-400">//</span>
+                <span>PROFESSIONAL MIC</span>
+                <span class="text-lime-400">//</span>
+                <span class="text-white font-semibold">ADOBE PREMIERE PRO</span>
+                <span class="text-lime-400">//</span>
+                <span>AFTER EFFECTS MOTION</span>
+                <span class="text-lime-400">//</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Micro Status Ribbon -->
+          <div class="w-full flex flex-wrap items-center justify-between gap-4 mt-8 pt-6 border-t border-white/10 text-xs font-mono text-zinc-400">
+            <div class="flex items-center gap-2">
+              <span class="text-white font-semibold">Formats:</span>
+              <span class="bg-white/10 px-2 py-0.5 rounded text-lime-400">9:16 Vertical Reels</span>
+              <span class="bg-white/10 px-2 py-0.5 rounded text-white">16:9 Horizontal Widescreen</span>
+            </div>
+            <div>
+              <a href="#work" class="text-lime-400 hover:underline flex items-center gap-1">
+                <span>Browse Video Archive</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       BIG COMPANY NAMES WORKED WITH (HOME PAGE)
+       ======================================================================== -->
+  <section id="brands" class="py-14 border-y border-white/10 bg-[#0a0a0f] overflow-hidden relative">
+    <div class="max-w-6xl mx-auto px-6 mb-8 text-center">
+      <span class="text-xs font-mono uppercase tracking-[0.25em] text-lime-400 block mb-1">
+        COLLABORATION HISTORY
+      </span>
+      <h2 class="text-xl sm:text-2xl font-syne font-bold text-white uppercase">
+        BRANDS & COMPANIES I'VE WORKED WITH
+      </h2>
+    </div>
+
+    <!-- Infinite Marquee -->
+    <div class="flex overflow-hidden select-none mb-8">
+      <div class="marquee-track flex items-center">
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">MERCEDES</span>
+        <span class="text-zinc-600 text-lg">&bull;</span>
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">AMAZON FASHION INDIA</span>
+        <span class="text-zinc-600 text-lg">&bull;</span>
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">INFOLLION</span>
+        <span class="text-zinc-600 text-lg">&bull;</span>
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">CZI GLOBAL</span>
+        <span class="text-zinc-600 text-lg">&bull;</span>
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">HEALTHY NUTRITION</span>
+        <span class="text-zinc-600 text-lg">&bull;</span>
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">WANDERON</span>
+        <span class="text-zinc-600 text-lg">&bull;</span>
+        <!-- Continuous loop duplicate -->
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">MERCEDES</span>
+        <span class="text-zinc-600 text-lg">&bull;</span>
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">AMAZON FASHION INDIA</span>
+        <span class="text-zinc-600 text-lg">&bull;</span>
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">INFOLLION</span>
+        <span class="text-zinc-600 text-lg">&bull;</span>
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">CZI GLOBAL</span>
+        <span class="text-zinc-600 text-lg">&bull;</span>
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">HEALTHY NUTRITION</span>
+        <span class="text-zinc-600 text-lg">&bull;</span>
+        <span class="text-2xl sm:text-3xl font-syne font-extrabold tracking-wider text-white hover:text-lime-400 transition-colors uppercase px-6">WANDERON</span>
+      </div>
+    </div>
+
+    <!-- Company Badge Grid -->
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+      <div class="p-3.5 rounded-xl bg-white/5 border border-white/5 text-center hover:border-lime-400/40 transition-all">
+        <span class="font-syne font-bold text-xs text-white block">Mercedes</span>
+        <span class="font-mono text-[9px] text-zinc-400 uppercase">Automotive</span>
+      </div>
+      <div class="p-3.5 rounded-xl bg-white/5 border border-white/5 text-center hover:border-lime-400/40 transition-all">
+        <span class="font-syne font-bold text-xs text-white block">Amazon Fashion</span>
+        <span class="font-mono text-[9px] text-zinc-400 uppercase">Apparel / E-Com</span>
+      </div>
+      <div class="p-3.5 rounded-xl bg-white/5 border border-white/5 text-center hover:border-lime-400/40 transition-all">
+        <span class="font-syne font-bold text-xs text-white block">Infollion</span>
+        <span class="font-mono text-[9px] text-zinc-400 uppercase">Corporate Tech</span>
+      </div>
+      <div class="p-3.5 rounded-xl bg-white/5 border border-white/5 text-center hover:border-lime-400/40 transition-all">
+        <span class="font-syne font-bold text-xs text-white block">CZI Global</span>
+        <span class="font-mono text-[9px] text-zinc-400 uppercase">Digital Media</span>
+      </div>
+      <div class="p-3.5 rounded-xl bg-white/5 border border-white/5 text-center hover:border-lime-400/40 transition-all">
+        <span class="font-syne font-bold text-xs text-white block">Healthy Nutrition</span>
+        <span class="font-mono text-[9px] text-zinc-400 uppercase">Health & Wellness</span>
+      </div>
+      <div class="p-3.5 rounded-xl bg-white/5 border border-white/5 text-center hover:border-lime-400/40 transition-all">
+        <span class="font-syne font-bold text-xs text-white block">WanderOn</span>
+        <span class="font-mono text-[9px] text-zinc-400 uppercase">Travel & Lifestyle</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       WORK SHOWCASE: BOTH VERTICAL (9:16) & HORIZONTAL (16:9)
+       ======================================================================== -->
+  <section id="work" class="py-24 px-6 max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-mono text-lime-400 uppercase tracking-widest mb-2">
+          <span>[ PORTFOLIO ARCHIVE ]</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-syne font-extrabold uppercase text-white">
+          VERTICAL & <span class="text-gradient-lime">HORIZONTAL WORK</span>
+        </h2>
+        <p class="text-sm text-zinc-400 mt-2 max-w-xl font-light">
+          Whether it is 9:16 vertical storytelling for Instagram Reels & TikTok or 16:9 horizontal widescreen for brand documentaries and YouTube campaigns.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center gap-2 p-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+        <button class="filter-tab-btn px-4 py-1.5 rounded-full text-xs font-mono transition-all bg-lime-400 text-black font-bold" data-filter="all">
+          ALL (BOTH)
+        </button>
+        <button class="filter-tab-btn px-4 py-1.5 rounded-full text-xs font-mono transition-all bg-white/5 text-zinc-400 hover:text-white" data-filter="vertical">
+          9:16 VERTICAL
+        </button>
+        <button class="filter-tab-btn px-4 py-1.5 rounded-full text-xs font-mono transition-all bg-white/5 text-zinc-400 hover:text-white" data-filter="horizontal">
+          16:9 HORIZONTAL
+        </button>
+        <button class="filter-tab-btn px-4 py-1.5 rounded-full text-xs font-mono transition-all bg-white/5 text-zinc-400 hover:text-white" data-filter="commercial">
+          COMMERCIAL
+        </button>
+        <button class="filter-tab-btn px-4 py-1.5 rounded-full text-xs font-mono transition-all bg-white/5 text-zinc-400 hover:text-white" data-filter="lifestyle">
+          LIFESTYLE
+        </button>
+      </div>
+    </div>
+
+    <!-- Dual Video Grid -->
+    <div id="videos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+      <!-- Populated dynamically by app.js -->
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-xs font-mono text-zinc-400">
+        💡 Hover on any frame to preview playback; click to open full production notes.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CAMERA & GEAR RIG (SPECS)
+       ======================================================================== -->
+  <section id="setup" class="py-24 px-6 max-w-6xl mx-auto border-t border-white/5">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-mono text-lime-400 uppercase tracking-widest mb-2 block">
+        [ CAMERA & RIG SETUP ]
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-syne font-extrabold uppercase text-white">
+        MY DAILY PRODUCTION RIG
+      </h2>
+      <p class="text-zinc-400 text-sm mt-3">
+        The exact equipment I shoot with to deliver cinema-grade 4K vertical and horizontal footage.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Camera -->
+      <div class="gear-spec-card">
+        <div class="w-10 h-10 rounded-xl bg-lime-400/10 text-lime-400 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        </div>
+        <span class="font-mono text-[10px] text-lime-400 uppercase tracking-wider block mb-1">CAMERA BODY</span>
+        <h3 class="text-lg font-syne font-bold text-white mb-2">Sony a6600</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed">
+          5-axis in-body image stabilization, ultra-reliable real-time autofocus, and 4K S-Log profile recording.
+        </p>
+      </div>
+
+      <!-- Lens -->
+      <div class="gear-spec-card">
+        <div class="w-10 h-10 rounded-xl bg-cyan-400/10 text-cyan-400 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line></svg>
+        </div>
+        <span class="font-mono text-[10px] text-cyan-400 uppercase tracking-wider block mb-1">CINEMA PRIME LENS</span>
+        <h3 class="text-lg font-syne font-bold text-white mb-2">Viltrox 35mm f/1.7</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed">
+          Fast f/1.7 aperture providing creamy depth-of-field, sharp subject separation, and low-light performance.
+        </p>
+      </div>
+
+      <!-- Gimbal -->
+      <div class="gear-spec-card">
+        <div class="w-10 h-10 rounded-xl bg-purple-400/10 text-purple-400 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+        </div>
+        <span class="font-mono text-[10px] text-purple-400 uppercase tracking-wider block mb-1">STABILIZATION</span>
+        <h3 class="text-lg font-syne font-bold text-white mb-2">DJI RS3 Mini Gimbal</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed">
+          Native vertical and horizontal 3-axis stabilization for buttery-smooth dynamic camera tracking moves.
+        </p>
+      </div>
+
+      <!-- Audio -->
+      <div class="gear-spec-card">
+        <div class="w-10 h-10 rounded-xl bg-orange-400/10 text-orange-400 flex items-center justify-center mb-4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+        </div>
+        <span class="font-mono text-[10px] text-orange-400 uppercase tracking-wider block mb-1">AUDIO RIG</span>
+        <h3 class="text-lg font-syne font-bold text-white mb-2">Professional Mic</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed">
+          Broadcast-quality audio capture with high clarity, wind rejection, and rich atmospheric sound Foley.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ABOUT GURMEHAR SINGH
+       ======================================================================== -->
+  <section id="about" class="py-24 px-6 max-w-5xl mx-auto border-t border-white/5">
+    <div class="glass-panel p-8 sm:p-12 rounded-3xl border-white/10">
+      <div class="max-w-3xl">
+        <span class="text-xs font-mono text-lime-400 uppercase tracking-widest block mb-2">
+          [ ABOUT GURMEHAR ]
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-syne font-extrabold uppercase text-white mb-5">
+          CREATIVE DESIGNER & <span class="text-gradient-lime">VIDEO EDITOR</span>
+        </h2>
+
+        <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light mb-4">
+          I am <strong>Gurmehar Singh</strong>. I work with brands and companies to shoot, edit, and shape their social media presence. Whether producing high-impact vertical reels for mobile feeds or widescreen horizontal films, I focus on clean aesthetics, rhythm, and storytelling that commands attention.
+        </p>
+
+        <p class="text-sm text-zinc-400 leading-relaxed mb-6">
+          I handle the full creative pipeline: concept moodboarding, on-location cinematography, video editing in Premiere Pro, kinetic typography in After Effects, and sound design. Having worked with brands like <strong>Mercedes, Amazon Fashion India, Infollion, CZI Global, Healthy Nutrition, and WanderOn</strong>, I know how to make your brand look modern, professional, and visually unforgettable.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#contact" class="btn-glow-primary text-xs">
+            Start a Collaboration
+          </a>
+          <a href="#work" class="btn-outline-glass text-xs">
+            Browse Videos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTACT / GET IN TOUCH
+       ======================================================================== -->
+  <section id="contact" class="py-24 px-6 max-w-4xl mx-auto border-t border-white/5">
+    <div class="text-center mb-12">
+      <span class="text-xs font-mono text-lime-400 uppercase tracking-widest mb-2 block">
+        [ LET'S CONNECT ]
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-syne font-extrabold uppercase text-white tracking-tight">
+        HAVE A PROJECT IN MIND?
+      </h2>
+      <p class="text-zinc-400 text-sm mt-3 max-w-md mx-auto">
+        Need videos shot and edited, motion graphics, or social presence direction for your brand? Reach out directly:
+      </p>
+      <div class="mt-4">
+        <a href="mailto:gurmehar2003@gmail.com" class="text-lime-400 text-lg sm:text-xl font-mono underline font-semibold hover:text-white transition-colors">
+          gurmehar2003@gmail.com
+        </a>
+      </div>
+    </div>
+
+    <form id="contact-form" class="glass-panel p-8 rounded-2xl border-white/10 space-y-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label class="block text-xs font-mono text-zinc-300 uppercase tracking-wider mb-2">Your Name *</label>
+          <input type="text" id="contact-name" required placeholder="Alex" class="w-full bg-[#161622] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-lime-400 transition-colors">
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-zinc-300 uppercase tracking-wider mb-2">Brand / Company Name</label>
+          <input type="text" id="contact-brand" placeholder="Your Brand" class="w-full bg-[#161622] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-lime-400 transition-colors">
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-xs font-mono text-zinc-300 uppercase tracking-wider mb-2">Project Brief & Details *</label>
+        <textarea id="contact-message" rows="3" required placeholder="Tell me what you're looking to shoot, edit, or design (Vertical, Horizontal, or both)..." class="w-full bg-[#161622] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-lime-400 transition-colors"></textarea>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+        <div class="text-xs font-mono text-zinc-400">
+          Direct email: <a href="mailto:gurmehar2003@gmail.com" class="text-lime-400 underline">gurmehar2003@gmail.com</a>
+        </div>
+        <button type="submit" class="w-full sm:w-auto btn-glow-primary text-sm px-8 py-3">
+          <span>Send Inquiry</span>
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="py-10 px-6 border-t border-white/5 bg-[#050508] text-xs font-mono text-zinc-400">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-lime-400"></span>
+        <span class="text-white font-syne font-bold">GURMEHAR SINGH</span>
+        <span class="text-zinc-600">&bull;</span>
+        <span>Creative Designer & Video Editor</span>
+      </div>
+
+      <div class="flex items-center gap-4 text-zinc-400">
+        <a href="mailto:gurmehar2003@gmail.com" class="hover:text-lime-400 transition-colors">gurmehar2003@gmail.com</a>
+      </div>
+
+      <div class="text-zinc-500">
+        &copy; 2026 Gurmehar Singh. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       THEATER MODE MODAL
+       ======================================================================== -->
+  <div id="theater-modal" class="theater-modal fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+    <div id="theater-backdrop" class="absolute inset-0 bg-black/92 backdrop-blur-2xl"></div>
+
+    <div class="relative z-10 glass-panel rounded-3xl border-white/15 max-w-4xl w-full max-h-[92vh] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+      <!-- Close Button -->
+      <button id="close-theater-modal" class="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-black/60 border border-white/20 text-white hover:bg-lime-400 hover:text-black transition-all flex items-center justify-center" title="Close (ESC)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <!-- Video Player Column -->
+      <div class="lg:w-1/2 bg-black flex items-center justify-center p-4 relative min-h-[400px] lg:min-h-[560px]">
+        <div class="w-full max-w-[280px] h-[520px] rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl relative bg-zinc-950 flex items-center justify-center">
+          <video id="modal-video-player" class="w-full h-full object-cover" controls autoplay loop playsinline></video>
+        </div>
+      </div>
+
+      <!-- Breakdown Column -->
+      <div class="lg:w-1/2 p-6 sm:p-8 flex flex-col justify-between overflow-y-auto">
+        <div class="space-y-4">
+          <div class="flex items-center gap-2">
+            <span id="modal-project-format" class="text-xs font-mono text-lime-400 uppercase tracking-widest font-semibold"></span>
+          </div>
+
+          <h3 id="modal-project-title" class="text-2xl font-syne font-extrabold text-white"></h3>
+          <div class="text-xs font-mono text-zinc-400">
+            Client / Brand: <span id="modal-project-client" class="text-white font-medium"></span>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-white/5 border border-white/5 space-y-2">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-zinc-400">My Role:</span>
+              <span id="modal-project-role" class="text-lime-400 font-semibold"></span>
+            </div>
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-zinc-400">Camera / Lens:</span>
+              <span id="modal-project-camera" class="text-white"></span>
+            </div>
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-zinc-400">Rig Setup:</span>
+              <span id="modal-project-rig" class="text-zinc-300"></span>
+            </div>
+          </div>
+
+          <div>
+            <span class="text-xs font-mono text-zinc-400 uppercase tracking-wider block mb-1.5">Project Overview</span>
+            <p id="modal-project-description" class="text-sm text-zinc-300 leading-relaxed font-light"></p>
+          </div>
+
+          <div>
+            <span class="text-xs font-mono text-zinc-400 uppercase tracking-wider block mb-2">Software & Pipeline</span>
+            <div id="modal-project-tools" class="flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-white/10">
+          <a href="#contact" onclick="document.getElementById('close-theater-modal').click()" class="btn-glow-primary text-xs w-full justify-center">
+            Commission a Project Like This
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Interaction Script -->
+  <script src="app.js"></script>
+</body>
+</html>
